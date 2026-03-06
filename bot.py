@@ -10,19 +10,19 @@ WEBAPP_URL = os.environ.get("WEBAPP_URL", "https://classy-buttercream-21d071.net
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     user = update.effective_user
-    name = user.first_name if user.first_name else "Окушы"
+    name = user.first_name if user.first_name else "Okushy"
 
     keyboard = InlineKeyboardMarkup([
         [InlineKeyboardButton(
-            text="Курсты баста 🚀🚀🚀",
+            text="Kursti basta 🚀🚀🚀",
             web_app=WebAppInfo(url=WEBAPP_URL)
         )]
     ])
 
     await update.message.reply_text(
-        f"Ассалаумагалейкум, {name}! 👋\n\n"
-        f"Каржылык Кайдзен курсына кош келдініз!\n\n"
-        f"Курсты бастау ушін томендегі батырманы басыныз 👇",
+        f"Assalaumagaleikum, {name}! 👋\n\n"
+        f"Karzylyk Kaizen kursyna kosh keldiniz!\n\n"
+        f"Kursti bastau ushin tomendegi batyrmany basynyzy 👇",
         reply_markup=keyboard,
     )
 
